@@ -1,0 +1,12 @@
+{
+  "name": "lab08-exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "start": "npx tailwindcss -i ./Tailwind/input.css -o ./src/style.css --watch  "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
