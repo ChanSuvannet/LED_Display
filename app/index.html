@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- css style -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- my library css -->
+    <link rel="stylesheet" href="css/library.css">
+    <!-- title -->
+    <title>LED TEXT</title>
+
+    <style>
+    
+    </style>
+</head>
+
+<body><br>
+    <header>
+        <div>LOGO</div>
+        <div onclick="openDialog()"><i class='bx bx-cog'></i></div>
+    </header>
+    <!-- main container -->
+    <main class="container">
+        <h1>Welcome To LED display</h1>
+
+        <!-- text for display -->
+        <canvas id="myCanvas"></canvas>
+
+    </main>
+
+    <!-- my dialog -->
+    <div id="dialog" class="modal-parent">
+        <div class="modal">
+            <div id="canvasContainer">
+                <input type="text" id="userText" placeholder="Enter your text here">
+                <select id="direction">
+                    <option value="right">Left to Right</option>
+                    <option value="left">Right to Left</option>
+                </select>
+                <button onclick="startAnimation()">Start Animation</button>
+            </div>
+          <span class="X" draggable="true">&times;</span>
+        </div>
+    </div>
+    <!-- Link the JavaScript file -->
+    <script src="js/index.js"></script>
+    <script src="js/animation.js"></script>
+</body>
+
+</html>
