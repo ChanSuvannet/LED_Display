@@ -1,0 +1,44 @@
+/* flex */
+.flex{
+    display: flex;
+}
+/* panding */
+.p-rl-20{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+/* items */
+.justify-between{
+    justify-content: space-between
+}
+.justify-center{
+    justify-content: center;
+}
+/* font size */
+.text {
+    font-size: var(--font-size, 16px); /* Default font size if not set */
+}
+
+/* Optional: Helper classes to set custom font sizes */
+.text-20 {
+    --font-size: 20px;
+}
+
+.text-25 {
+    --font-size: 25px;
+}
+
+.text-30 {
+    --font-size: 30px;
+}
+
+.text-40 {
+    --font-size: 40px;
+}
+
+.text-50 {
+    --font-size: 50px;
+}
+.text-60 {
+    --font-size: 60px;
+}
