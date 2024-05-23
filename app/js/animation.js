@@ -54,7 +54,7 @@ function startAnimation() {
     } else {
         x = canvas.width;
     }
-    y = canvas.height / 2;
+    y = canvas.height / 2.5;
 
     // Cancel any existing animation frames
     if (animationFrameId) {
@@ -68,4 +68,13 @@ function startAnimation() {
 window.onload = function () {
     canvas = document.getElementById('myCanvas');
     context = canvas.getContext('2d');
+}
+
+function toggleIcon() {
+    const menuIcon = document.getElementById('menu-icon').firstElementChild;
+    if (menuIcon.classList.contains('bx-menu')) {
+        menuIcon.classList.replace('bx-menu', 'bx-x');
+    } else {
+        menuIcon.classList.replace('bx-x', 'bx-menu');
+    }
 }
