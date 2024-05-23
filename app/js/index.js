@@ -30,6 +30,7 @@ class Modal {
 
 document.addEventListener('DOMContentLoaded', function() {
     new Modal();
+    
 });
 
 function openDialog() {
