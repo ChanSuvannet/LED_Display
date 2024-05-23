@@ -29,12 +29,12 @@ function drawText() {
     context.fillText(userText, x, y);
 
     if (direction === 'right') {
-        x += 2;
+        x += 0.5;
         if (x > canvas.width) {
             x = -context.measureText(userText).width;
         }
     } else {
-        x -= 2;
+        x -= 0.5;
         if (x < -context.measureText(userText).width) {
             x = canvas.width;
         }
@@ -54,7 +54,7 @@ function startAnimation() {
     } else {
         x = canvas.width;
     }
-    y = canvas.height / 2.5;
+    y = canvas.height / 2;
 
     // Cancel any existing animation frames
     if (animationFrameId) {
@@ -68,13 +68,4 @@ function startAnimation() {
 window.onload = function () {
     canvas = document.getElementById('myCanvas');
     context = canvas.getContext('2d');
-}
-
-function toggleIcon() {
-    const menuIcon = document.getElementById('menu-icon').firstElementChild;
-    if (menuIcon.classList.contains('bx-menu')) {
-        menuIcon.classList.replace('bx-menu', 'bx-x');
-    } else {
-        menuIcon.classList.replace('bx-x', 'bx-menu');
-    }
 }
