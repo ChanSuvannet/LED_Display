@@ -83,9 +83,11 @@
                             <option value="monospace">Monospace</option>
                         </select>
                     </div>
-                    <button onclick="startAnimation(); closeDialog()" id="bnt-ani" class="my-btn-sty">Start Animation</button>
+                    <button onclick="startAnimation(); closeDialog()" id="bnt-ani" class="my-btn-sty">Start
+                        Animation</button>
                 </div>
                 <div id="tabs-2" class="tabcontent">
+
                     <div class="flex flex-co w-full">
                         <label for="direction">Animation</label>
                         <select id="direction">
@@ -105,7 +107,15 @@
                             <option value="4">Fastest (x4)</option>
                         </select>
                     </div>
-                    <button onclick="startAnimation(); closeDialog()" id="bnt-ani" class="my-btn-sty">Start Animation</button>
+                    <!-- Theme Selection-->
+                    <label for="theme">Theme</label>
+                    <div class="imgList">
+                        <ul>
+                            <!-- Images will be added here by JavaScript -->
+                        </ul>
+                    </div>
+                    <button onclick="startAnimation(); closeDialog()" id="bnt-ani" class="my-btn-sty">Start
+                        Animation</button>
                 </div>
             </div>
         </div>
@@ -130,6 +140,7 @@
     <!-- Link the JavaScript file -->
     <script src="js/index.js"></script>
     <script src="js/animation.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 
 </html>
