@@ -315,3 +315,42 @@ img:hover {
 .selected {
     border: 3px solid blue;
 }
+
+.profile-content .img-profile {
+    border-radius: 100%;
+    border: none;
+}
+
+.profile-content .img-profile:hover {
+    border: none;
+    cursor: default;
+}
+
+.profile-content .profile-tab {
+    background-color: #f7f7f7;
+    height: 10em;
+    width: auto;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin: 2px;
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* This centers the text horizontally */
+}
+
+.profile-content .profile-tab h3 {
+    font-size: 0.8em;
+}
+
+.profile-content .profile-tab p {
+    font-size: 0.6em;
+}
+
+.profile-section {
+    display: flex;
+    justify-content: space-around;
+}
+
