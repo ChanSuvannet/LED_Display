@@ -1,19 +1,15 @@
-/* font pixel */
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
-
 /* Global style */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
-    /* font-family: 'Pixelify Sans', sans-serif; */
     font-family: Arial, sans-serif;
 }
 
-/* Styles for portrait iphone 14 pro max */
 body {
     background-color: #fff;
+    font-family: Arial, sans-serif;
 }
 
 header {
@@ -37,18 +33,12 @@ h1 {
 }
 
 canvas {
-    /* border: 1px solid black; */
     width: 100%;
     height: auto;
 }
 
-#header-style{
+#header-style {
     width: 50%;
-}
-
-  /* General styles */
-  body {
-    font-family: Arial, sans-serif;
 }
 
 .tab {
@@ -72,38 +62,43 @@ canvas {
 
 .tabcontent.active {
     display: block;
+    max-height: 100%;
+    overflow-y: auto; /* Ensures scrollability */
 }
+
 /* Styles for setting-controls */
 .setting-controls {
     width: 100%;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    max-height: 50vh; /* Adjust the max height as needed */
 }
 
-/* Styles for max-w430 phone portrait style */
+/* Responsive styles for smaller screens */
 @media only screen and (max-width: 430px) and (orientation: portrait) {
-    
     .header-dialog div > span.welcome {
-        display: none; /* Hide the .welcome element */
+        display: none;
     }
-    .setting-controls{
+    .setting-controls {
         flex-direction: column;
+        max-height: 60vh; /* Adjust the max height for smaller screens */
     }
     canvas {
-        /* border: 1px solid black; */
         padding-top: 300px;
         width: 100%;
     }
-    label{
+    label {
         font-size: 15px;
     }
 }
-#bnt-ani{
+
+#bnt-ani {
     display: flex;
     justify-content: end;
     align-items: end;
 }
+
 .modal-parent {
     position: fixed;
     background-color: rgb(230, 230, 230);
@@ -135,18 +130,13 @@ canvas {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
 }
 
 .X {
-    /* position: absolute;
-    right: 20px;
-    top: 20px; */
     cursor: pointer;
-
 }
 
 section {
@@ -160,15 +150,15 @@ section {
     align-items: center;
     flex-direction: column;
 }
-.header-dialog{
+
+.header-dialog {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-
 #canvasContainer {
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff;
     padding: 20px;
     width: 100%;
     display: flex;
@@ -193,33 +183,34 @@ section {
     border-radius: 5px;
     font-size: 16px;
 }
-option{
+
+option {
     width: 50%;
 }
-a{
+
+a {
     text-decoration: none;
 }
-/* Keyframes for right to left animation */
+
 @keyframes moveRightToLeft {
     0% {
-        transform: translateX(100%); 
+        transform: translateX(100%);
     }
     100% {
-        transform: translateX(-100%); 
+        transform: translateX(-100%);
     }
 }
 
-/* Apply the animation to the .welcome element */
 .welcome {
     width: 100%;
-    display: inline-block; 
-    white-space: nowrap; 
-    animation: moveRightToLeft 5s linear infinite; 
+    display: inline-block;
+    white-space: nowrap;
+    animation: moveRightToLeft 5s linear infinite;
 }
 
-.my-btn-sty{
+.my-btn-sty {
     padding: 10px 20px;
-    background-color: #007bff; 
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
@@ -227,28 +218,31 @@ a{
     cursor: pointer;
     transition: background-color 0.3s;
 }
-.my-btn-sty1{
+
+.my-btn-sty1 {
     padding: 10px 20px;
-    background-color: #007bff; 
+    background-color: #007bff;
     color: white;
     border: none;
-    border-radius:10px 0px 0px 10px;
+    border-radius: 10px 0px 0px 10px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
-.my-btn-sty2{
+
+.my-btn-sty2 {
     padding: 10px 20px;
-    background-color: #007bff; 
+    background-color: #007bff;
     color: white;
     border: none;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
-.my-btn-sty3{
+
+.my-btn-sty3 {
     padding: 10px 20px;
-    background-color: #007bff; 
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 0px 10px 10px 0px;
@@ -258,7 +252,7 @@ a{
 }
 
 button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #0056b3;
 }
 
 #spaceBetween {
@@ -277,4 +271,47 @@ button:hover {
     border: 1px solid #ced4da;
     border-radius: 5px;
     font-size: 16px;
+}
+
+.imgList {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 7em;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.imgList ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.imgList li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    margin-top: 1em;
+    margin-left: 0.5em;
+    height: 5em;
+    border-radius: 15px;
+    padding: 0.2em;
+    max-width: calc(5em * 16 / 9);
+    transition: transform 0.3s;
+    border: 1px solid blue;
+    cursor: pointer;
+}
+
+img:hover {
+    border: 3px solid orange;
+}
+
+.selected {
+    border: 3px solid blue;
 }
