@@ -331,7 +331,7 @@ img:hover {
 .profile-content .profile-tab {
     background-color: #f7f7f7;
     height: 10em;
-    width: auto;
+    width: 100%;
     padding-left: 2em;
     padding-right: 2em;
     margin: 2px;
