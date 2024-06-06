@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    /* overflow: hidden; */ /* Temporarily disable overflow hidden */
     font-family: Arial, sans-serif;
 }
 
@@ -58,12 +58,18 @@ canvas {
 
 .tabcontent {
     display: none;
+    /* Disable transitions and animations for debugging */
+    transition: none; 
+    animation: none;  
 }
 
 .tabcontent.active {
     display: block;
     max-height: 100%;
     overflow-y: auto; /* Ensures scrollability */
+    /* Disable transitions and animations for debugging */
+    transition: none; 
+    animation: none;  
 }
 
 /* Styles for setting-controls */
@@ -121,18 +127,8 @@ canvas {
     font-size: 22px;
     font-family: arial;
     position: relative;
-    animation: 1s drop;
     display: flex;
     flex-direction: column;
-}
-
-@keyframes drop {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .X {
@@ -329,7 +325,7 @@ img:hover {
 .profile-content .profile-tab {
     background-color: #f7f7f7;
     height: 10em;
-    width: auto;
+    width: 100%;
     padding-left: 2em;
     padding-right: 2em;
     margin: 2px;
@@ -351,6 +347,5 @@ img:hover {
 
 .profile-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-
